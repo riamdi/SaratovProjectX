@@ -1,0 +1,145 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url('fonts/BebasNeue-Regular.otf');
+    
+}
+@font-face {
+    font-family: Impact;
+    src: url('fonts/Inter-VariableFont_opsz\,wght.ttf');
+    
+}
+@font-face {
+    font-family: Monsterrat;
+    src: url('fonts/Montserrat-Regular.ttf');
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+html{
+    box-sizing: border-box;
+    background-color: #001B58
+}
+
+body, p, h1, h2, h3, ul, ol {
+    margin: 0;
+    padding: 0;
+    
+}
+.menu {
+    margin-top: 10px;
+}
+.menu-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-container__menu {
+  display: flex;            
+  gap: 40px;                
+  align-items: center;  
+
+}
+
+.a_menu {
+  text-decoration: none;
+  color: #D2D6FF;
+  font-size: 30px;
+  font-weight: lighter;
+  font-family: "Bebas Neue";
+}
+.header {
+    position: relative;
+    width: 100%; 
+    background: url('img/most_png.png') no-repeat center center;
+    background-size: cover; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    color: white; 
+    margin-bottom: 20px;
+    
+}
+
+.header-container {
+    margin-top: 170px;
+    max-width: 90%; 
+    
+    
+}
+
+.header_title, .route_title  {
+    margin-top: 20px;
+    line-height: normal;
+    font-size: 120px;
+    margin-bottom: 20px;
+    font-family: Bebas Neue;
+    width: 70%;
+    /* border: 1px red solid; */
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+}
+
+.header_text {
+    margin-top: 300px;
+    font-family: Monsterrat;
+    font-size: 32px;
+}
+
+.route_cards{
+    display: flex;
+    
+}
+.route_container {
+    border: 1px solid red;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.route_title {
+    margin-bottom: 120px;
+}
+.route_card {
+    max-width: 630px;
+    
+}
+.route_card_photo {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    
+}
+
+.route_card_title {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Monsterrat;
+    font-size: 34px;
+    color: white;
+    line-height: normal;
+}
+.route_card_text {
+    margin-top: 50px;
+    text-align: center;
+    margin-top: 27px;
+    font-family: Monsterrat;
+    font-size: 26px;
+    color: white;
+    line-height: normal;
+}
+.card2{
+    margin-top: 200px;
+    margin-left: 100px;
+}
+.card4{
+    margin-top: 300px;
+    margin-left: 100px;
+}
+
+
