@@ -5,25 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>SaratovProjectX</title>
 </head>
 <body>
     <header class="menu">
-        <div class="menu-container">
-            <div class="menu-container__logo">
-                <img class="menu-container__logo_img" src="img/logo.png" alt="logo" height="150" width="150">
-            </div>
-            <div class="menu-container__menu">
-                <a href="" class="menu-container__menu_main  a_menu">Главная</a>
-                <a href="" class="menu-container__menu_route a_menu">Маршруты</a>
-                <a href="" class="menu-container__menu_events a_menu">События</a>
-                <a href="" class="menu-container__menu_partners a_menu">Партнёры</a>
-                <a href="" class="menu-container__menu_bloggers a_menu">Блогеры</a>
-                <a href="" class="menu-container__menu_forms a_menu">Форма</a>
-            </div>
+    <div class="menu-container">
+        <div class="menu-container__logo">
+            <img class="menu-container__logo_img" src="img/logo.png" alt="logo" height="150" width="150">
         </div>
-    </header>
+
+        <!-- Бургер-кнопка -->
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Ссылки -->
+        <div class="menu-container__menu" id="menu">
+            <a href="" class="a_menu">Главная</a>
+            <a href="" class="a_menu">Маршруты</a>
+            <a href="" class="a_menu">События</a>
+            <a href="" class="a_menu">Партнёры</a>
+            <a href="" class="a_menu">Блогеры</a>
+            <a href="" class="a_menu">Форма</a>
+        </div>
+    </div>
+
+    <!-- затемнение фона -->
+    <div class="overlay" id="overlay"></div>
+</header>
+
 
     <section class="header">
         <div class="header-container">
@@ -186,7 +200,7 @@
 
 <section class="forms">
     <div class="forms_container">
-        <h1 class="events_title ">Форма обратной связи</h1>
+        <h1 class="events_title ">ФОРМА ОБРАТНОЙ СВЯЗИ</h1>
         <p class="events_text">Поделитесь, что вам понравилось на нашем портале, а что, на ваш взгляд, можно улучшить. Нам важно ваше мнение — расскажите, каких новых возможностей или идей вы хотели бы видеть здесь.</p>
         <div class="form_container">
             <form class="glass_form" action="">
@@ -199,10 +213,6 @@
         </div>
     </div>
 </section>
-
-
-
-
 <script src="script.js"></script>
 
 </body>

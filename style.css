@@ -27,7 +27,6 @@ html {
   /* overflow: hidden; */
 }
 
-/* псевдоэлемент для размытия */
 html::before {
   content: "";
   position: fixed;
@@ -40,34 +39,63 @@ html::before {
 body, p, h1, h2, h3, ul, ol {
     margin: 0;
     padding: 0;
-     
-
-    
 }
+
 .menu {
     margin-top: 10px;
 }
+
 .menu-container {
     max-width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.menu-container__menu {
-  display: flex;            
-  gap: 40px;                
-  align-items: center;  
 
+.menu-container__menu {
+    display: flex;            
+    gap: 40px;                
+    align-items: center;  
 }
 
 .a_menu {
-  text-decoration: none;
-  color: #D2D6FF;
-  font-size: 25px;
-  font-weight: lighter;
-  font-family: "Bebas Neue";
-  
+    text-decoration: none;
+    color: #D2D6FF;
+    font-size: 25px;
+    font-weight: lighter;
+    font-family: "Bebas Neue";
 }
+
+/* Бургер-кнопка */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    height: 4px;
+    background: #D2D6FF;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Затемнение фона */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
 .header {
     position: relative;
     width: 100%; 
@@ -264,6 +292,35 @@ body, p, h1, h2, h3, ul, ol {
     font-family: Bebas Neue;
     font-size: 40px;
     color: white; 
+}
+route_card_photo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    transition: 0.3s ease;
+}
+
+/* Карточки */
+.partner_card, .card {
+    width: 100%;
+    max-width: 350px; /* максимальная ширина карточки */
+    height: auto;     /* пусть высота адаптируется под контент */
+}
+
+/* Логотип */
+.menu-container__logo_img {
+    width: 150px;   /* начальный размер */
+    height: auto;
+    transition: 0.3s;
+}
+
+/* Форма */
+.glass_form {
+    width: 70%;
+    max-width: 500px;
+    height: auto;
+    padding: 30px;
+    transition: 0.3s;
 }
 
 .events {

@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <span>${event.time}</span>
                         </div>
                         <p class="card-description">${event.description}</p>
-                        <button class="card-button">Участвовать</button>
+                        <button class="card-button">Посмотреть</button>
                     </div>
                 `;
                 carousel.appendChild(card);
@@ -192,3 +192,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 resetAutoScroll();
             });
         });
+
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+const overlay = document.getElementById('overlay');
+
+burger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+    menu.classList.remove('active');
+    overlay.classList.remove('active');
+});
