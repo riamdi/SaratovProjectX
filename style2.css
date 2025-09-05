@@ -194,28 +194,178 @@
 }
 }
 
+/* ============================= */
+/* Адаптив для экранов ≤430px */
+/* ============================= */
+
+/* ============================= */
+/* Адаптив для экранов ≤430px */
+/* ============================= */
+
 @media (max-width: 430px) {
+
+    /* ======= Меню и бургер ======= */
+    .menu-container__menu {
+        display: none; /* скрываем обычное меню */
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding-top: 150px;
+        transition: right 0.3s ease;
+        z-index: 15;
+    }
+
+    .menu-container__menu.active {
+        right: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .overlay {
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .overlay.active {
+        opacity: 1;
+    }
+
+    .a_menu {
+        font-size: 22px;
+    }
+
+    .menu-container__logo_img {
+        width: 120px;
+    }
+
+    /* ======= Заголовки ======= */
+    .header_title {
+        font-size: 36px;
+        margin-top: 100px;
+    }
+
+    .header_text {
+        font-size: 18px;
+        margin-top: 50px;
+    }
+
+    .route_title, .events_title {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    .route_card_title {
+        font-size: 22px;
+    }
+
+    .route_card_text {
+        font-size: 16px;
+        margin-top: 15px;
+        padding: 5px;
+    }
+
+    /* ======= Сетка карточек маршрутов ======= */
+    .route_cards {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .card2, .card4, .card5 {
+        margin-left: 0 !important;
+        margin-top: 30px !important;
+    }
+
+    .route_card_photo_img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* ======= Партнёры ======= */
     .partners_cards {
-        grid-gap: 20px; /* уменьшаем отступы */
+        grid-template-columns: 1fr !important; /* одна колонка */
+        gap: 20px;
         padding: 10px;
     }
 
     .partner_card {
-        height: auto; /* высота под контент */
+        height: auto;
         padding: 15px;
-        
     }
 
     .partner_card_img {
-        height: 180px; /* уменьшаем изображения */
+        height: 200px;
     }
 
     .partner_card_title {
-        font-size: 22px; /* уменьшаем заголовки */
+        font-size: 20px;
     }
 
     .partner_card_addres,
     .partner_card_text {
-        font-size: 18px; /* уменьшаем текст */
+        font-size: 16px;
     }
+
+    /* ======= Форма ======= */
+    .glass_form {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .form_title {
+        font-size: 20px;
+    }
+
+    .form_input {
+        width: 70%;
+        padding: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .form_button {
+        width: 70%;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    /* ======= Footer / кнопка TG ======= */
+    .route_footer_text_tg {
+        font-size: 16px;
+        margin-top: 50px;
+    }
+
+    .route_footer_button_tg {
+        width: 90%;
+        height: 80px;
+        font-size: 16px;
+    }
+
+    .route_footer_button_text {
+        font-size: 28px;
+    }
+        .route_footer_button_tg {
+        width: 90%;
+        height: 70px;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .route_footer_button_icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .route_footer_button_text {
+        font-size: 20px;
+    }
+
 }
