@@ -1,6 +1,6 @@
 @font-face {
     font-family: Bebas Neue;
-    src: url('fonts/BebasNeue-Regular.otf');
+    src: url('fonts/ofont.ru_Montserrat\ Alternates\ \(1\).ttf');
     
 }
 @font-face {
@@ -10,7 +10,7 @@
 }
 @font-face {
     font-family: Monsterrat;
-    src: url('fonts/Montserrat-Regular.ttf');
+    src: url('fonts/ofont.ru_Montserrat\ Alternates.ttf');
     
 }
 
@@ -63,9 +63,10 @@ body, p, h1, h2, h3, ul, ol {
 .a_menu {
   text-decoration: none;
   color: #D2D6FF;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: lighter;
   font-family: "Bebas Neue";
+  
 }
 .header {
     position: relative;
@@ -89,10 +90,11 @@ body, p, h1, h2, h3, ul, ol {
     
 }
 
+
 .header_title, .route_title, .events_title  {
     margin-top: 20px;
     line-height: normal;
-    font-size: 120px;
+    font-size: 100px;
     margin-bottom: 20px;
     font-family: Bebas Neue;
     width: 70%;
@@ -111,10 +113,12 @@ body, p, h1, h2, h3, ul, ol {
 }
 
 .route_cards{
+   
     display: flex;
-    
+    justify-content: center;
 }
 .route_container {
+    
     /* border: 1px solid red; */
     max-width: 90%;
     margin: 0 auto;
@@ -136,6 +140,11 @@ body, p, h1, h2, h3, ul, ol {
     
 }
 
+.route_card_photo_img{
+      border-radius: 20px; /* закругление углов */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* тень */
+}
+
 .route_card_title {
     text-align: center;
     margin-top: 20px;
@@ -144,6 +153,8 @@ body, p, h1, h2, h3, ul, ol {
     color: white;
     line-height: normal;
 }
+
+
 .route_card_text {
     margin-top: 50px;
     text-align: center;
@@ -152,6 +163,8 @@ body, p, h1, h2, h3, ul, ol {
     font-size: 26px;
     color: white;
     line-height: normal;
+    padding: 10px;
+    
 }
 .card2{
     margin-top: 200px;
@@ -161,10 +174,13 @@ body, p, h1, h2, h3, ul, ol {
     margin-top: 300px;
     margin-left: 100px;
 }
-
+.card5{
+    margin-top: 100px;
+}
+/* 
 .vector_line_1 {
     position: absolute;
-    top: 200px;
+    top: 250px;
     left: 500px;
     z-index: -10;
 }
@@ -185,7 +201,7 @@ body, p, h1, h2, h3, ul, ol {
     top:1950px;
     left: 500px;
     z-index: -10;
-}
+} */
 
 .route_footer_text_tg{
     text-align: center;
@@ -285,6 +301,7 @@ body, p, h1, h2, h3, ul, ol {
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    margin-bottom: 100px;
 }
 
 .card {
@@ -452,7 +469,7 @@ body, p, h1, h2, h3, ul, ol {
 }
 
 .events_text {
-        text-align: center;
+    text-align: center;
     font-family: Monsterrat;
     font-size: 27px;
     color: white;
@@ -463,6 +480,158 @@ body, p, h1, h2, h3, ul, ol {
     margin-bottom: 100px;
 }
 
+/* Сетка для карточек */
+.partners_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 столбца */
+    grid-gap: 40px; /* отступы между карточками */
+    padding: 20px;
+    max-width: 90%; /* можно настроить ширину контейнера */
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
 
+/* Стеклянная карточка */
+.partner_card {
+    height: 450px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* Тень для объёма */
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner_card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.partner_card_img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.partner_card_title {
+    margin-bottom: 5px;
+       text-align: center;
+    font-family: Monsterrat;
+    font-size: 27px;
+    color: white;
+}
+
+.partner_card_addres,
+.partner_card_text {
+    text-align: center;
+    font-family: Monsterrat;
+    font-size: 25px;
+    color: white;
+    margin: 2px 0;
+}
+.forms{
+     padding-bottom: 100px;
+}
+
+/* Центрируем контейнер */
+.form_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('img/background.jpg') no-repeat center/cover; /* можно фон */
+   
+}
+
+/* Сама стеклянная форма */
+.glass_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 440px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Заголовок формы */
+.form_title {
+        text-align: center;
+    font-family: Monsterrat;
+    font-size: 25px;
+    color: white;
+    margin: 30px 0;
+}
+
+/* Поля ввода */
+.form_input {
+    width: 80%;
+    padding: 20px 15px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: 0.3s;
+    font-family: Monsterrat;
+}
+
+.form_input::placeholder {
+    color: rgba(255,255,255,0.7);
+    font-family: Monsterrat;
+}
+
+.form_input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255,255,255,0.4);
+    font-family: Monsterrat;
+}
+
+
+.form_button {
+    padding: 25px 40px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Monsterrat;
+    font-size: 25px;
+    color: white;
+}
+
+.form_button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+}
 
 
