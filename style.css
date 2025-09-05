@@ -698,5 +698,386 @@ partner_card img{
     background: rgba(255, 255, 255, 0.35);
     transform: translateY(-2px);
 }
+.background-blur {
+  position: fixed;
+  inset: 0;
+  background: url("img/fon3.jpg") center/cover no-repeat;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: -1; /* и будет корректно */
+}
+
+@media (max-width: 1520px) {
+    .header_title, .route_title, .events_title  {
+    margin-top: 20px;
+    line-height: normal;
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: Bebas Neue;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+}
+.route_title{
+    margin-bottom: 50px;
+}
+.menu-container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-container__menu {
+  display: flex;            
+  gap: 20px;                
+  align-items: center;  
+}
+}
+@media (max-width: 1320px) {
+
+.partners_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 столбца */
+    grid-gap: 20px; /* отступы между карточками */
+    padding: 20px;
+    justify-items: center;
+    
+}
+.partners_card{
+    margin: 0 auto;
+}
+}
+
+
+@media (max-width: 1300px) {
+    .menu-container__logo_img{
+    margin-right: 30px;
+}
+    .menu-container__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 300px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-left: 1px solid rgba(255,255,255,0.2);
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 30px;
+        transition: 0.3s;
+        z-index: 20;
+    }
+
+    .menu-container__menu.active {
+        right: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .a_menu {
+        font-size: 22px;
+    }
+}
+@media (max-width: 1000px){
+    .route_cards{
+    display: block;
+    margin: 0 auto;
+}
+    .route_card{
+    margin: 0 auto;
+    padding-top: 50px;
+
+}
+
+    .header_title, .route_title, .events_title  {
+    margin-top: 20px;
+    line-height: normal;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: Bebas Neue;
+    width: 90%;
+   
+}
+}
+
+@media (max-width: 870px){
+        .partners_cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 2 столбца */
+    grid-gap: 10px; /* отступы между карточками */
+    padding: 20px;
+}
+}
+@media (max-width: 600px){
+
+        .header_title, .route_title, .events_title  {
+    margin-top: 20px;
+    line-height: normal;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: Bebas Neue;
+    width: 90%;
+}
+.header_text {
+    font-family: Monsterrat;
+    font-size: 20px;
+}
+.route_card_title {
+    font-size: 25px;
+}
+.route_card_text {
+    font-size: 20px;
+}
+.route_footer_text_tg{
+    font-size: 20px;
+}
+.route_footer_button {
+    margin-top: 80px;
+    
+}
+.route_footer_button_tg {
+    
+    max-width: 90%;
+    width: 270px;
+    height: 70px;
+}
+.route_footer_button_text{
+    font-family: Bebas Neue;
+    font-size: 20px;
+    color: white; 
+}
+.route_footer_button {
+    margin-top: 30px;
+    
+}
+.events_text {
+    font-size: 20px;
+}
+
+
+.partner_card_addres,
+.partner_card_text, .partner_card_title {
+    
+    font-size: 20px;
+}
+}
+
+@media (max-width: 480px){
+.form_button {
+    margin-bottom: 40px;
+}
+}
+@media (max-width: 450px) {
+    .partner_card_img {
+        height: 200px; /* уменьшаем карточку */
+    }
+
+    .menu-container__logo_img {
+        width: 100px;  /* уменьшаем логотип */
+    }
+
+    .glass_form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .card-image img {
+        height: 150px;
+    }
+    .partner_card {
+    height: 300px;
+    }
+
+    .glass_form {
+    width: 300px;
+    height: 500px;
+}
+}
+
+/* ============================= */
+/* Адаптив для экранов ≤430px */
+/* ============================= */
+
+/* ============================= */
+/* Адаптив для экранов ≤430px */
+/* ============================= */
+
+@media (max-width: 430px) {
+
+    /* ======= Меню и бургер ======= */
+    .menu-container__menu {
+        display: none; /* скрываем обычное меню */
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding-top: 150px;
+        transition: right 0.3s ease;
+        z-index: 15;
+    }
+
+    .menu-container__menu.active {
+        right: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .overlay {
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .overlay.active {
+        opacity: 1;
+    }
+
+    .a_menu {
+        font-size: 22px;
+    }
+
+    .menu-container__logo_img {
+        width: 120px;
+    }
+
+    /* ======= Заголовки ======= */
+    .header_title {
+        font-size: 36px;
+        margin-top: 100px;
+    }
+
+    .header_text {
+        font-size: 18px;
+        margin-top: 50px;
+    }
+
+    .route_title, .events_title {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    .route_card_title {
+        font-size: 22px;
+    }
+
+    .route_card_text {
+        font-size: 16px;
+        margin-top: 15px;
+        padding: 5px;
+    }
+
+    /* ======= Сетка карточек маршрутов ======= */
+    .route_cards {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .card2, .card4, .card5 {
+        margin-left: 0 !important;
+        margin-top: 30px !important;
+    }
+
+    .route_card_photo_img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* ======= Партнёры ======= */
+    .partners_cards {
+        grid-template-columns: 1fr !important; /* одна колонка */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .partner_card {
+        height: auto;
+        padding: 15px;
+    }
+
+    .partner_card_img {
+        height: 200px;
+    }
+
+    .partner_card_title {
+        font-size: 20px;
+    }
+
+    .partner_card_addres,
+    .partner_card_text {
+        font-size: 16px;
+    }
+
+    /* ======= Форма ======= */
+    .glass_form {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .form_title {
+        font-size: 20px;
+    }
+
+    .form_input {
+        width: 70%;
+        padding: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .form_button {
+        width: 70%;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    /* ======= Footer / кнопка TG ======= */
+    .route_footer_text_tg {
+        font-size: 16px;
+        margin-top: 50px;
+    }
+
+    .route_footer_button_tg {
+        width: 90%;
+        height: 80px;
+        font-size: 16px;
+    }
+
+    .route_footer_button_text {
+        font-size: 28px;
+    }
+        .route_footer_button_tg {
+        width: 90%;
+        height: 70px;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .route_footer_button_icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .route_footer_button_text {
+        font-size: 20px;
+    }
+
+}
+
 
 
