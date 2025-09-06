@@ -32,10 +32,10 @@ html::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: inherit;    /* берём фон от html */
-  filter: blur(8px);      /* степень размытия */
-  transform: scale(1.1);  /* чтобы не появились тёмные края */
-  z-index: -11;            /* уводим назад */
+  background: inherit;    
+  filter: blur(8px);     
+  transform: scale(1.1);  
+  z-index: -11;            
 }
 body, p, h1, h2, h3, ul, ol {
     margin: 0;
@@ -68,7 +68,6 @@ body, p, h1, h2, h3, ul, ol {
     font-family: "Bebas Neue";
 }
 
-/* Бургер-кнопка */
 .burger {
     display: none;
     flex-direction: column;
@@ -86,7 +85,7 @@ body, p, h1, h2, h3, ul, ol {
     transition: 0.3s;
 }
 
-/* Затемнение фона */
+
 .overlay {
     display: none;
     position: fixed;
@@ -170,8 +169,8 @@ body, p, h1, h2, h3, ul, ol {
 }
 
 .route_card_photo_img{
-      border-radius: 20px; /* закругление углов */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* тень */
+      border-radius: 20px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
 }
 
 .route_card_title {
@@ -206,31 +205,6 @@ body, p, h1, h2, h3, ul, ol {
 .card5{
     margin-top: 100px;
 }
-/* 
-.vector_line_1 {
-    position: absolute;
-    top: 250px;
-    left: 500px;
-    z-index: -10;
-}
-.vector_line_2 {
-    position: absolute;
-    top:800px;
-    left: 470px;
-    z-index: -10;
-}
-.vector_line_3 {
-    position: absolute;
-    top:1250px;
-    left: 500px;
-    z-index: -10;
-}
-.vector_line_4 {
-    position: absolute;
-    top:1950px;
-    left: 500px;
-    z-index: -10;
-} */
 
 .route_footer_text_tg{
     text-align: center;
@@ -257,28 +231,22 @@ body, p, h1, h2, h3, ul, ol {
     max-width: 90%;
     width: 400px;
     height: 100px;
-
-    /* 🔹 стеклянный фон */
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-
-    /* 🔹 стильная тень */
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.5),
         inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 
-    color: white; /* текст/иконка читаемые */
+    color: white;
     font-size: 1.2rem;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
-/* 🔹 эффект при наведении */
 .route_footer_button_tg:hover {
     background: rgba(255, 255, 255, 0.18);
     transform: translateY(-3px);
@@ -302,21 +270,19 @@ route_card_photo img {
     transition: 0.3s ease;
 }
 
-/* Карточки */
 .partner_card, .card {
     width: 100%;
-    max-width: 350px; /* максимальная ширина карточки */
-    height: auto;     /* пусть высота адаптируется под контент */
+    max-width: 350px; 
+    height: auto;    
 }
 
-/* Логотип */
 .menu-container__logo_img {
-    width: 150px;   /* начальный размер */
+    width: 150px;  
     height: auto;
     transition: 0.3s;
 }
 
-/* Форма */
+
 .glass_form {
     width: 70%;
     max-width: 500px;
@@ -421,7 +387,7 @@ route_card_photo img {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    color: white; /* 🔥 текст делаем белым для читаемости */
+    color: white;
 }
 
 .card-title {
@@ -539,19 +505,18 @@ route_card_photo img {
     margin-bottom: 100px;
 }
 
-/* Сетка для карточек */
+
 .partners_cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 столбца */
-    grid-gap: 40px; /* отступы между карточками */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px; 
     padding: 20px;
-    max-width: 90%; /* можно настроить ширину контейнера */
+    max-width: 90%; 
     margin: 0 auto;
     margin-bottom: 100px;
     justify-items: center;
 }
 
-/* Стеклянная карточка */
 .partner_card {
     height: 450px;
     background: rgba(255, 255, 255, 0.12);
@@ -560,7 +525,6 @@ route_card_photo img {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 
-    /* Тень для объёма */
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.05),
@@ -617,16 +581,14 @@ partner_card img{
      padding-bottom: 100px;
 }
 
-/* Центрируем контейнер */
+
 .form_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('img/background.jpg') no-repeat center/cover; /* можно фон */
+    background: url('img/background.jpg') no-repeat center/cover; 
    
 }
-
-/* Сама стеклянная форма */
 .glass_form {
     display: flex;
     flex-direction: column;
@@ -645,7 +607,6 @@ partner_card img{
         inset 0 -1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* Заголовок формы */
 .form_title {
         text-align: center;
     font-family: Monsterrat;
@@ -654,7 +615,6 @@ partner_card img{
     margin: 30px 0;
 }
 
-/* Поля ввода */
 .form_input {
     width: 80%;
     padding: 20px 15px;
@@ -706,8 +666,8 @@ partner_card img{
   background: url("img/fon3.jpg") center/cover no-repeat;
   filter: blur(8px);
   transform: scale(1.1);
-z-index: -2; /* Увеличиваем отрицательный z-index */
-  pointer-events: none; /* Отключаем взаимодействие с фоном */
+    z-index: -2; 
+  pointer-events: none; 
 }
 
 .menu-container__menu,
@@ -720,18 +680,8 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 .glass_form,
 .form_input {
   position: relative;
-  z-index: 2; /* Устанавливаем z-index для интерактивных элементов */
+  z-index: 2; 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width: 1520px) {
@@ -765,8 +715,8 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 
 .partners_cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 столбца */
-    grid-gap: 20px; /* отступы между карточками */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; 
     padding: 20px;
     justify-items: center;
     
@@ -841,8 +791,8 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 @media (max-width: 870px){
         .partners_cards {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 2 столбца */
-    grid-gap: 10px; /* отступы между карточками */
+    grid-template-columns: repeat(1, 1fr); 
+    grid-gap: 10px; 
     padding: 20px;
 }
 }
@@ -907,11 +857,11 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 }
 @media (max-width: 450px) {
     .partner_card_img {
-        height: 200px; /* уменьшаем карточку */
+        height: 200px; 
     }
 
     .menu-container__logo_img {
-        width: 100px;  /* уменьшаем логотип */
+        width: 100px; 
     }
 
     .glass_form {
@@ -936,14 +886,13 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 
 @media (max-width: 430px) {
 
-    /* ======= Меню и бургер ======= */
     .menu-container__menu {
-    /* display: none; <- удаляем */
+    
     flex-direction: column;
     gap: 20px;
     position: fixed;
     top: 0;
-    right: -100%; /* по умолчанию скрыто за экраном */
+    right: -100%; 
     width: 70%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
@@ -953,7 +902,7 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 }
 
 .menu-container__menu.active {
-    right: 0; /* показываем меню через анимацию */
+    right: 0; 
 }
 
     .burger {
@@ -963,7 +912,7 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
     }
 
     .overlay {
-    display: none; /* по умолчанию скрыт */
+    display: none; 
     opacity: 0;
     position: fixed;
     top: 0; left: 0;
@@ -975,7 +924,7 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 }
 
 .overlay.active {
-    display: block; /* показываем только когда JS добавляет класс active */
+    display: block; 
     opacity: 1;
 }
     .a_menu {
@@ -986,7 +935,7 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
         width: 120px;
     }
 
-    /* ======= Заголовки ======= */
+    
     .header_title {
         font-size: 36px;
         margin-top: 100px;
@@ -1012,7 +961,7 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
         padding: 5px;
     }
 
-    /* ======= Сетка карточек маршрутов ======= */
+ 
     .route_cards {
         flex-direction: column !important;
         align-items: center;
@@ -1028,9 +977,9 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
         height: auto;
     }
 
-    /* ======= Партнёры ======= */
+    
     .partners_cards {
-        grid-template-columns: 1fr !important; /* одна колонка */
+        grid-template-columns: 1fr !important; 
         gap: 20px;
         padding: 10px;
     }
@@ -1053,7 +1002,7 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
         font-size: 16px;
     }
 
-    /* ======= Форма ======= */
+   
     .glass_form {
         width: 80%;
         height: auto;
@@ -1077,7 +1026,7 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
         font-size: 18px;
     }
 
-    /* ======= Footer / кнопка TG ======= */
+    
     .route_footer_text_tg {
         font-size: 16px;
         margin-top: 50px;

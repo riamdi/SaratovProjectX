@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Данные мероприятий
+    
     const events = [
         {
             title: "Щелкунчик",
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
     const indicator = document.querySelector('.indicator');
     
-    // Генерация карточек мероприятий
+    
     events.forEach((event, index) => {
         const card = document.createElement('div');
         card.className = 'card';
@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const cardCount = cards.length;
     const cardWidth = cards[0].offsetWidth + 30;
 
-    // Клонирование для бесконечной прокрутки
     const firstCard = cards[0].cloneNode(true);
     const lastCard = cards[cardCount - 1].cloneNode(true);
     
@@ -158,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
     carousel.addEventListener('mouseleave', () => resetAutoScroll());
 });
 
-// ======= Бургер-меню и оверлей =======
 const burger = document.getElementById('burger');
 const menu = document.getElementById('menu');
 const overlay = document.getElementById('overlay');
@@ -173,7 +171,6 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
-// ======= Плавный скролл + закрытие меню при клике на якорь =======
 const menuLinks = menu.querySelectorAll('a[href^="#"]');
 
 menuLinks.forEach(link => {
