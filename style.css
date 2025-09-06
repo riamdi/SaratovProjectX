@@ -247,6 +247,7 @@ body, p, h1, h2, h3, ul, ol {
     
 }
 .route_footer_button_tg {
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
