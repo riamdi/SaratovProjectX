@@ -704,8 +704,33 @@ partner_card img{
   background: url("img/fon3.jpg") center/cover no-repeat;
   filter: blur(8px);
   transform: scale(1.1);
-  z-index: -1; /* и будет корректно */
+z-index: -2; /* Увеличиваем отрицательный z-index */
+  pointer-events: none; /* Отключаем взаимодействие с фоном */
 }
+
+.menu-container__menu,
+.burger,
+.route_footer_button_tg,
+.control-btn,
+.indicator-dot,
+.card-button,
+.form_button,
+.glass_form,
+.form_input {
+  position: relative;
+  z-index: 2; /* Устанавливаем z-index для интерактивных элементов */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1520px) {
     .header_title, .route_title, .events_title  {
@@ -749,6 +774,16 @@ partner_card img{
 }
 }
 
+.route_footer_button_tg,
+.control-btn,
+.card-button,
+.form_button {
+  min-height: 44px; /* Минимальный размер для кликабельной области */
+  min-width: 44px;
+}
+
+
+
 
 @media (max-width: 1300px) {
     .menu-container__logo_img{
@@ -768,7 +803,7 @@ partner_card img{
         padding: 50px 20px;
         gap: 30px;
         transition: 0.3s;
-        z-index: 20;
+        z-index: 1000;
     }
 
     .menu-container__menu.active {
@@ -777,6 +812,7 @@ partner_card img{
 
     .burger {
         display: flex;
+        z-index: 1001;
     }
 
     .overlay.active {
@@ -786,6 +822,7 @@ partner_card img{
     .a_menu {
         font-size: 22px;
     }
+    
 }
 @media (max-width: 1000px){
     .route_cards{
@@ -903,13 +940,7 @@ partner_card img{
 }
 }
 
-/* ============================= */
-/* Адаптив для экранов ≤430px */
-/* ============================= */
 
-/* ============================= */
-/* Адаптив для экранов ≤430px */
-/* ============================= */
 
 @media (max-width: 430px) {
 
@@ -1080,4 +1111,18 @@ partner_card img{
 }
 
 
-
+/* Исправление для touch-устройств */
+@media (hover: none) and (pointer: coarse) {
+  .card-button:hover,
+  .control-btn:hover,
+  .form_button:hover,
+  .route_footer_button_tg:hover {
+    transform: none; /* Убираем трансформации при наведении на touch-устройствах */
+  }
+  
+  /* Увеличиваем область клика для мобильных */
+  .indicator-dot {
+    width: 16px;
+    height: 16px;
+  }
+}
