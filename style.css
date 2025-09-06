@@ -774,16 +774,6 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 }
 }
 
-.route_footer_button_tg,
-.control-btn,
-.card-button,
-.form_button {
-  min-height: 44px; /* Минимальный размер для кликабельной области */
-  min-width: 44px;
-}
-
-
-
 
 @media (max-width: 1300px) {
     .menu-container__logo_img{
@@ -946,38 +936,46 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 
     /* ======= Меню и бургер ======= */
     .menu-container__menu {
-        display: none; /* скрываем обычное меню */
-        flex-direction: column;
-        gap: 20px;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        padding-top: 150px;
-        transition: right 0.3s ease;
-        z-index: 15;
-    }
+    /* display: none; <- удаляем */
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    right: -100%; /* по умолчанию скрыто за экраном */
+    width: 70%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    padding-top: 150px;
+    transition: right 0.3s ease;
+    z-index: 15;
+}
 
-    .menu-container__menu.active {
-        right: 0;
-    }
+.menu-container__menu.active {
+    right: 0; /* показываем меню через анимацию */
+}
 
     .burger {
         display: flex;
+        z-index: 1001;
+    cursor: pointer;
     }
 
     .overlay {
-        display: block;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
+    display: none; /* по умолчанию скрыт */
+    opacity: 0;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
 
-    .overlay.active {
-        opacity: 1;
-    }
-
+.overlay.active {
+    display: block; /* показываем только когда JS добавляет класс active */
+    opacity: 1;
+}
     .a_menu {
         font-size: 22px;
     }
@@ -1111,18 +1109,4 @@ z-index: -2; /* Увеличиваем отрицательный z-index */
 }
 
 
-/* Исправление для touch-устройств */
-@media (hover: none) and (pointer: coarse) {
-  .card-button:hover,
-  .control-btn:hover,
-  .form_button:hover,
-  .route_footer_button_tg:hover {
-    transform: none; /* Убираем трансформации при наведении на touch-устройствах */
-  }
-  
-  /* Увеличиваем область клика для мобильных */
-  .indicator-dot {
-    width: 16px;
-    height: 16px;
-  }
-}
+
