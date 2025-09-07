@@ -806,6 +806,9 @@ partner_card img{
     font-family: Bebas Neue;
     width: 90%;
 }
+.header-container {
+    margin-top: 70px;
+}
 .header_text {
     font-family: Monsterrat;
     font-size: 20px;
@@ -899,6 +902,9 @@ partner_card img{
     padding-top: 150px;
     transition: right 0.3s ease;
     z-index: 15;
+}
+.header-container {
+    margin-top: 40px;
 }
 
 .menu-container__menu.active {
